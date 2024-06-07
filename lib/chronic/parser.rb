@@ -143,7 +143,7 @@ module Chronic
       text.gsub!(/\b0(\d+):(\d{2}):(\d{2}) ([ap]m)\b/, '\1:\2:\3 \4')
       
       # Handle time zones with '+' or '-'
-      text.gsub!(/\bgmt([+-]\d{2}:?\d{2})\b/, 'tzplusminus\1')
+      text.gsub!(/\bgmt([+-])(\d{2}:?\d{2})\b/, 'gmt \2')
       text
     end
 
